@@ -1,22 +1,5 @@
-# StefaniniApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
-
-## First run
-
-For the first run you must install all the modules added to the project, with the command, npm i.
-
-## First run the back end
-
-In a console navigate to the folder stefanini-app and enter the command npm run json. It will open the port 3000 for the api.
-
-## To start front end server
-
-In a console navigate to the folder stefanini-app and enter the command npm run start. It will open a window automatically.
-
-## SampleContent
-
-"profiles": [
+{
+  "profiles": [
     { "id": 1, "firstName": "Zen", "lastName": "Koan", "email": "zen@koan.jp" },
     { "id": 2, "firstName": "Stoic", "lastName": "Trait", "email": "stoic@trait.gr" },
     { "id": 3, "firstName": "Leader", "lastName": "Ship", "email": "leadership@everywhere.net" },
@@ -57,7 +40,4 @@ In a console navigate to the folder stefanini-app and enter the command npm run 
     { "id": 26, "title": "Wisdom", "author": "stoic@trait.gr", "published": "2/9/2020", "description": "Is the acceptance of ignorance" },
     { "id": 27, "title": "Instincts", "author": "daemon_listener@athens.gr", "published": "2/10/2020", "description": "Train your sensitivity of the gut" }
   ]
-
-
-
-
+}

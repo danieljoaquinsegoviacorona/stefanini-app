@@ -1,0 +1,49 @@
+<mat-grid-list cols="8" rowHeight="200px">
+  <mat-grid-tile [colspan]="2" [rowspan]="4" class="mat-elevation-z1">
+
+    <app-author-list [authors]="authors"></app-author-list>
+
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="6" [rowspan]="3" class="mat-elevation-z1">
+    <mat-table [dataSource]="dataSource" matSort style="width:90%">
+      <!-- Number Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+      </ng-container>
+
+      <!-- Author Column -->
+      <ng-container matColumnDef="author">
+        <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.author}} </mat-cell>
+      </ng-container>
+
+      <!-- Published Column -->
+      <ng-container matColumnDef="published">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Published </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.published}} </mat-cell>
+      </ng-container>
+
+      <!-- Description Column -->
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="6" [rowspan]="1" class="mat-elevation-z1">
+    <mat-paginator [pageSize]="pageSize" (page)="pageEvent = updateAuthors()"></mat-paginator>
+  </mat-grid-tile>
+
+</mat-grid-list>
